@@ -11,12 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217151243) do
+ActiveRecord::Schema.define(:version => 20121217153650) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.integer  "course_id"
   end
 
   create_table "courses", :force => true do |t|
@@ -40,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20121217151243) do
     t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.integer  "course_id"
   end
 
   create_table "universities", :force => true do |t|

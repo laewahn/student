@@ -3,5 +3,6 @@ class User < ActiveRecord::Base
   
   belongs_to :university
   has_and_belongs_to_many :courses
-  
+  has_many :comments
+  has_many :documents
 end
