@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121222101514) do
+ActiveRecord::Schema.define(:version => 20121222103744) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
@@ -68,6 +68,11 @@ ActiveRecord::Schema.define(:version => 20121222101514) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "university_id"
+    t.string   "name"
+    t.string   "home_country"
+    t.string   "major"
+    t.integer  "semesters"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
