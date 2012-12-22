@@ -3,8 +3,6 @@ Student::Application.routes.draw do
 
   resources :comments
 
-  resources :users
-
   resources :courses
 
   resources :universities
