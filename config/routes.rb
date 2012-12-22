@@ -1,4 +1,6 @@
 Student::Application.routes.draw do
+  devise_for :users
+
   resources :documents
 
   resources :comments
